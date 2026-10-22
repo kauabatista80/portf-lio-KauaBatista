@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Interativo de Postura Profissional | SENAI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BARRA DE PROGRESSO -->
+    <div id="progress-bar"></div>
+
+    <!-- CABEÇALHO INSTITUCIONAL -->
+    <header class="top-header">
+        <div class="container header-content">
+            <div class="brand-box">
+                <div class="senai-logo">SENAI</div>
+                <div class="brand-divider"></div>
+                <div class="brand-text">
+                    <span class="brand-title">PORTAL DE CONVIVÊNCIA</span>
+                    <span class="brand-sub">Manual Interativo de Postura</span>
+                </div>
+            </div>
+            <a href="#quiz" class="cta-nav">Fazer o Teste de Postura</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> GUIA DE EXCELÊNCIA E ATITUDE PROFISSIONAL
+            </div>
+            <h1 class="hero-title">
+                Sua postura hoje define o seu <br>
+                <span class="text-highlight">lugar no mercado amanhã.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Mais do que cumprir regras, o ambiente escolar é a simulação real do seu futuro profissional. Explore os recursos interativos abaixo e descubra seu nível de maturidade corporativa.
+            </p>
+            <div class="hero-buttons">
+                <a href="#pilares" class="btn btn-red">Explorar os Pilares</a>
+                <a href="#quiz" class="btn btn-dark">Testar Minha Postura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1: PILARES DA POSTURA -->
+    <section id="pilares" class="section">
+        <div class="container">
+            <div class="section-title-box">
+                <span class="tag-red">CONCEITO & FUNDAMENTOS</span>
+                <h2>Os 6 Pilares do Profissional SENAI</h2>
+                <p>Passe o mouse ou toque nos cards para ver o impacto de cada pilar no seu perfil.</p>
+            </div>
+
+            <div class="grid-pilares">
+                <div class="pilar-card">
+                    <div class="pilar-icon">01</div>
+                    <h3>Responsabilidade</h3>
+                    <p>Honrar prazos, compromissos assumidos e responder com maturidade pelas suas escolhas cotidianas.</p>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">02</div>
+                    <h3>Respeito & Convivência</h3>
+                    <p>Saber ouvir, valorizar ideias diferentes e respeitar o espaço e a individualidade de todos.</p>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">03</div>
+                    <h3>Cultura 5S</h3>
+                    <p>Manter ferramentas, salas e bancadas limpas e prontas para uso do próximo colega.</p>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">04</div>
+                    <h3>Comunicação Assertiva</h3>
+                    <p>Expressar-se de forma clara, educada e adequada aos ambientes técnicos e corporativos.</p>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">05</div>
+                    <h3>Autonomia & Iniciativa</h3>
+                    <p>Resolver problemas e agir proativamente sem a necessidade de fiscalização contínua.</p>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">06</div>
+                    <h3>Ética & Integridade</h3>
+                    <p>Fazer o que é correto e seguro sempre, mantendo sua palavra mesmo sem vigilância.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: GUIA DE AMBIENTES (COM FILTRO DINÂMICO) -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title-box">
+                <span class="tag-red">INTERATIVO</span>
+                <h2>Guia Prático de Ambientes</h2>
+                <p>Filtre por ambiente para ver as normas e expectativas de postura de cada local.</p>
+            </div>
+
+            <!-- BOTÕES DE FILTRO -->
+<div class="filter-tabs">
+    <button class="tab-btn active" onclick="filtrarAmbiente('todos', this)">Todos os Ambientes</button>
+    <button class="tab-btn" onclick="filtrarAmbiente('salas', this)">Salas de Aula</button>
+    <button class="tab-btn" onclick="filtrarAmbiente('oficinas', this)">Oficinas / Labs</button>
+    <button class="tab-btn" onclick="filtrarAmbiente('corredores', this)">Corredores</button>
+    <button class="tab-btn" onclick="filtrarAmbiente('patio', this)">Áreas de Convivência</button>
+</div>
+            <div class="grid-ambientes">
+                <div class="amb-box" data-category="salas">
+                    <div class="amb-banner red">SALAS DE AULA</div>
+                    <div class="amb-body">
+                        <ul>
+                            <li>Participar ativamente das discussões.</li>
+                            <li>Respeitar a fala de professores e colegas.</li>
+                            <li>Evitar distrações no celular durante orientações.</li>
+                            <li>Organizar a carteira ao final do horário.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="amb-box" data-category="oficinas">
+                    <div class="amb-banner dark">OFICINAS E LABORATÓRIOS</div>
+                    <div class="amb-body">
+                        <ul>
+                            <li>Uso rigoroso de EPIs e equipamentos de proteção.</li>
+                            <li>Zelo com máquinas, computadores e ferramentas.</li>
+                            <li>Limpeza e organização total após as práticas.</li>
+                            <li>Atenção máxima: zero brincadeiras operacionais.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="amb-box" data-category="corredores">
+                    <div class="amb-banner red">CORREDORES E CIRCULAÇÃO</div>
+                    <div class="amb-body">
+                        <ul>
+                            <li>Tom de voz moderado perto de outras turmas.</li>
+                            <li>Manter portas e vias de passagem livres.</li>
+                            <li>Não sentar no chão em áreas de circulação.</li>
+                            <li>Tratar toda a equipe de apoio com respeito.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="amb-box" data-category="patio">
+                    <div class="amb-banner dark">ÁREAS DE CONVIVÊNCIA</div>
+                    <div class="amb-body">
+                        <ul>
+                            <li>Uso adequado de mesas e assentos coletivos.</li>
+                            <li>Descarte correto de resíduos nas lixeiras 5S.</li>
+                            <li>Convivência pacífica e sem algazarras.</li>
+                            <li>Acolhimento e inclusão de todos os colegas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: MATRIZ DE ATITUDES (INTERATIVA COM ACCORDION) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title-box">
+                <span class="tag-red">MATRIZ EXPANSÍVEL</span>
+                <h2>Atitudes Cotidianas vs. Impacto Profissional</h2>
+                <p>Clique em qualquer linha da matriz para revelar como corrigir o comportamento e se destacar.</p>
+            </div>
+
+            <div class="accordion-matrix">
+                <div class="acc-item bad" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span class="bullet red"></span>
+                        <span class="acc-title">Sentar no chão ou em locais de passagem</span>
+                        <span class="acc-badge danger">Impacto Negativo</span>
+                        <span class="acc-icon">+</span>
+                    </div>
+                    <div class="acc-content">
+                        <p><strong>O que transmite:</strong> Falta de visão de espaço público e descuido com a própria imagem.</p>
+                        <p class="acc-solution">💡 <strong>Como agir certo:</strong> Utilize bancos e cadeiras próprias nas áreas de convivência.</p>
+                    </div>
+                </div>
+
+                <div class="acc-item bad" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span class="bullet red"></span>
+                        <span class="acc-title">Uso indevido do celular durante explicações</span>
+                        <span class="acc-badge danger">Impacto Negativo</span>
+                        <span class="acc-icon">+</span>
+                    </div>
+                    <div class="acc-content">
+                        <p><strong>O que transmite:</strong> Falta de foco, desinteresse e desrespeito ao palestrante ou instrutor.</p>
+                        <p class="acc-solution">💡 <strong>Como agir certo:</strong> Guarde o celular em momentos de instrução direta ou use apenas para fins didáticos.</p>
+                    </div>
+                </div>
+
+                <div class="acc-item bad" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span class="bullet red"></span>
+                        <span class="acc-title">Gritos ou linguagem vulgar nos corredores</span>
+                        <span class="acc-badge danger">Impacto Negativo</span>
+                        <span class="acc-icon">+</span>
+                    </div>
+                    <div class="acc-content">
+                        <p><strong>O que transmite:</strong> Falta de maturidade emocional e desrespeito com o trabalho dos outros.</p>
+                        <p class="acc-solution">💡 <strong>Como agir certo:</strong> Mantenha tom de voz adequado ao ambiente profissional.</p>
+                    </div>
+                </div>
+
+                <div class="acc-item bad" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span class="bullet red"></span>
+                        <span class="acc-title">Deixar lixo e bancadas sujas no final do treino</span>
+                        <span class="acc-badge danger">Impacto Negativo</span>
+                        <span class="acc-icon">+</span>
+                    </div>
+                    <div class="acc-content">
+                        <p><strong>O que transmite:</strong> Falta de senso de coletividade e ausência do conceito básico de 5S.</p>
+                        <p class="acc-solution">💡 <strong>Como agir certo:</strong> Reserve os últimos 5 minutos da aula para limpar e organizar seu local.</p>
+                    </div>
+                </div>
+
+                <div class="acc-item good" onclick="toggleAccordion(this)">
+                    <div class="acc-header">
+                        <span class="bullet green"></span>
+                        <span class="acc-title">Manter bancada limpa e ajudar os colegas proativamente</span>
+                        <span class="acc-badge success">Destaque Positivo</span>
+                        <span class="acc-icon">+</span>
+                    </div>
+                    <div class="acc-content">
+                        <p><strong>O que transmite:</strong> Espírito de liderança, proatividade, responsabilidade e alta empregabilidade.</p>
+                        <p class="acc-solution">⭐ <strong>Excelente!</strong> É esse tipo de atitude que faz professores recomendarem alunos para empresas parceiras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: NOVO QUIZ / TERMÔMETRO DE POSTURA -->
+    <section id="quiz" class="section bg-light">
+        <div class="container">
+            <div class="section-title-box text-center">
+                <span class="tag-red">TESTE SEU PERFIL</span>
+                <h2>Termômetro de Postura Profissional</h2>
+                <p>Responda com sinceridade às 3 questões rápidas abaixo:</p>
+            </div>
+
+            <div class="quiz-card">
+                <div id="quiz-step-1" class="quiz-step">
+                   <h4>1. Ao terminar uma atividade prática ou na sala, você costuma:</h4>
+                    <button class="quiz-option" onclick="responderQuiz(1, 10)">Guardar tudo, limpar a bancada e perguntar se alguém precisa de ajuda.</button>
+                    <button class="quiz-option" onclick="responderQuiz(1, 5)">Guardar só o seu material e sair rápido.</button>
+                    <button class="quiz-option" onclick="responderQuiz(1, 0)">Deixar os materiais na mesa porque outro horário arruma.</button>
+                </div>
+
+                <div id="quiz-step-2" class="quiz-step hidden">
+                    <h4>2. Quando um instrutor ou colega está falando com a turma, você:</h4>
+                    <button class="quiz-option" onclick="responderQuiz(2, 10)">Presta atenção total e espera o momento certo para contribuir.</button>
+                    <button class="quiz-option" onclick="responderQuiz(2, 5)">Escuta, mas dá olhadas paralelas nas redes sociais do celular.</button>
+                    <button class="quiz-option" onclick="responderQuiz(2, 0)">Conversa em paralelo ou interrompe com frequência.</button>
+                </div>
+
+                <div id="quiz-step-3" class="quiz-step hidden">
+                    <h4>3. Em relação aos prazos dos trabalhos em grupo:</h4>
+                    <button class="quiz-option" onclick="responderQuiz(3, 10)">Entrega a sua parte antes da data para ajudar na revisão do grupo.</button>
+                    <button class="quiz-option" onclick="responderQuiz(3, 5)">Entrega no último minuto do prazo final.</button>
+                    <button class="quiz-option" onclick="responderQuiz(3, 0)">Normalmente atrasa e dá desculpas ao grupo.</button>
+                </div>
+
+                <div id="quiz-result" class="quiz-result hidden">
+                    <h3>Resultado do Seu Termômetro:</h3>
+                    <div id="result-score" class="score-badge">0 Pontos</div>
+                    <h4 id="result-title">Título do Perfil</h4>
+                    <p id="result-desc">Descrição do perfil do aluno baseada nas escolhas.</p>
+                    <button class="btn btn-red" onclick="reiniciarQuiz()">Refazer Teste</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SEÇÃO 6: EU NO MERCADO DE TRABALHO -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title-box text-center">
+                <span class="tag-red">CONSCIENTIZAÇÃO</span>
+                <h2>Eu no Mercado de Trabalho</h2>
+                <p>A mentalidade que você adota na escola é a mesma que levará para a sua carreira.</p>
+            </div>
+
+            <div class="grid-comparacao">
+                <div class="comp-card school">
+                    <div class="comp-header">NA ESCOLA</div>
+                    <div class="comp-body">
+                        <p class="quote">"Eu posso fazer isso porque ninguém está vendo."</p>
+                    </div>
+                </div>
+
+                <div class="comp-vs">VS</div>
+
+                <div class="comp-card work">
+                    <div class="comp-header">NO TRABALHO</div>
+                    <div class="comp-body">
+                        <p class="quote">"Minha postura será observada por colegas, gestores e clientes."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reflexao-box text-center">
+                <h3>💡 Provocação para Reflexão</h3>
+                <p>Se um recrutador acompanhasse seu comportamento durante um dia inteiro na escola, <strong>que profissional ele enxergaria?</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 8: DESAFIO FINAL & ASSINATURA -->
+    <section class="section final-section">
+        <div class="container text-center">
+            <span class="tag-red">DESAFIO FINAL</span>
+            <h2 class="final-title">E você? Que profissional suas atitudes estão construindo?</h2>
+            <p class="final-subtitle">Comece hoje. Assine o seu compromisso e guarde como referência para a sua carreira.</p>
+
+            <div class="form-card">
+                <form id="formCompromisso" onsubmit="return false;">
+                    <div class="input-group">
+                        <input type="text" id="nomeAluno" placeholder="Digite seu nome completo..." required>
+                        <button type="submit" id="btnAssinar" class="btn btn-red">Gerar Certificado</button>
+                    </div>
+                </form>
+
+                <!-- CERTIFICADO IMPRESSÍVEL / VISUAL -->
+                <div id="cartaoResultado" class="cartao-resultado hidden">
+                    <div class="cert-border">
+                        <div class="cartao-header">
+                            <span class="senai-logo-sm">SENAI</span>
+                            <span class="cartao-tag">COMPROMISSO DE POSTURA & CONDUTA</span>
+                        </div>
+                        <p class="cert-text">Certificamos que o(a) aluno(a):</p>
+                        <h3 id="nomeDisplay">Nome do Aluno</h3>
+                        <p class="cert-body">Assumiu formalmente o compromisso com a excelência em Postura Profissional, respeitando as normas, a ética, o 5S e o trabalho em equipe no ambiente escolar e corporativo.</p>
+                        <div class="cartao-footer">
+                            <span id="dataAtual">Data: --/--/----</span>
+                            <span class="status-ok">✔ COMPROMISSO ATIVO</span>
+                        </div>
+                    </div>
+                    <button onclick="window.print()" class="btn btn-dark btn-print">🖨️ Imprimir / Salvar em PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p><strong>SENAI • Manual Interativo de Postura Profissional</strong></p>
+            <p class="footer-author">Desenvolvido por <strong>Kauã Batista Barbosa</strong> • Formando os Líderes do Futuro</p>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Barra de progresso
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) progressBar.style.width = scrolled + '%';
+        });
+
+        // Data no certificado
+        const hoje = new Date();
+        const dataFormatada = hoje.toLocaleDateString('pt-BR');
+        const elemData = document.getElementById('dataAtual');
+        if (elemData) elemData.innerText = `Data: ${dataFormatada}`;
+
+        // Certificado
+        const formCompromisso = document.getElementById('formCompromisso');
+        if (formCompromisso) {
+            formCompromisso.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const nomeInput = document.getElementById('nomeAluno');
+                const nome = nomeInput ? nomeInput.value.trim() : '';
+                if (nome) {
+                    const display = document.getElementById('nomeDisplay');
+                    const cartao = document.getElementById('cartaoResultado');
+                    if (display) display.innerText = nome;
+                    if (cartao) {
+                        cartao.classList.remove('hidden');
+                        cartao.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+        }
+    });
+
+    // Filtro de ambientes
+    function filtrarAmbiente(categoria, elemento) {
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        if (elemento) elemento.classList.add('active');
+
+        const boxes = document.querySelectorAll('.amb-box');
+        boxes.forEach(box => {
+            if (categoria === 'todos' || box.getAttribute('data-category') === categoria) {
+                box.classList.remove('hidden');
+            } else {
+                box.classList.add('hidden');
+            }
+        });
+    }
+
+    // Accordion de Atitudes
+    function toggleAccordion(element) {
+        element.classList.toggle('active');
+    }
+
+    // Quiz
+    let pontuacaoQuiz = 0;
+
+    function responderQuiz(etapa, pontos) {
+        pontuacaoQuiz += pontos;
+        const stepAtual = document.getElementById(`quiz-step-${etapa}`);
+        if (stepAtual) stepAtual.classList.add('hidden');
+
+        if (etapa < 3) {
+            const proximoStep = document.getElementById(`quiz-step-${etapa + 1}`);
+            if (proximoStep) proximoStep.classList.remove('hidden');
+        } else {
+            exibirResultadoQuiz();
+        }
+    }
+
+    function exibirResultadoQuiz() {
+        const quizResult = document.getElementById('quiz-result');
+        const scoreBadge = document.getElementById('result-score');
+        const resultTitle = document.getElementById('result-title');
+        const resultDesc = document.getElementById('result-desc');
+
+        if (quizResult) quizResult.classList.remove('hidden');
+        if (scoreBadge) scoreBadge.innerText = `${pontuacaoQuiz} / 30 Pontos`;
+
+        if (pontuacaoQuiz >= 25) {
+            if (resultTitle) resultTitle.innerText = "⭐ Perfil: Profissional do Futuro";
+            if (resultDesc) resultDesc.innerText = "Excelente! Você demonstra maturidade, proatividade e respeito. Seu perfil atrai a atenção de professores e recrutadores de grandes empresas.";
+        } else if (pontuacaoQuiz >= 15) {
+            if (resultTitle) resultTitle.innerText = "📈 Perfil: Em Desenvolvimento";
+            if (resultDesc) resultDesc.innerText = "Você tem boas intenções, mas precisa atentar para pequenos detalhes cotidianos de organização e foco para alcançar o nível profissional.";
+        } else {
+            if (resultTitle) resultTitle.innerText = "⚠️ Perfil: Necessita de Ajuste Imediato";
+            if (resultDesc) resultDesc.innerText = "Sua postura atual pode prejudicar sua imagem no mercado. Utilize as dicas deste manual para mudar seus hábitos ainda hoje!";
+        }
+    }
+
+    function reiniciarQuiz() {
+        pontuacaoQuiz = 0;
+        const quizResult = document.getElementById('quiz-result');
+        const step1 = document.getElementById('quiz-step-1');
+        if (quizResult) quizResult.classList.add('hidden');
+        if (step1) step1.classList.remove('hidden');
+    }
+    </script>
+</body>
+</html>
