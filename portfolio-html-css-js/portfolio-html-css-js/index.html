@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Kauã Batista Barbosa — Desenvolvedor em Evolução. Projetos, habilidades e certificados construídos no SENAI.">
+  <title>Kauã Batista Barbosa · Desenvolvedor em Evolução</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       SPRITE DE ÍCONES (desenhados uma vez, usados com <use>)
+       ====================================================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-baixo" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-codigo" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+    <symbol id="i-imagens" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+    <symbol id="i-clique" viewBox="0 0 24 24"><path d="m9 9 5 12 1.8-5.2L21 14Z"/><path d="M7.2 2.2 8 5.1"/><path d="m5.1 8-2.9-.8"/><path d="M14 4.1 12 6"/><path d="m6 12-1.9 2"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-medalha" viewBox="0 0 24 24"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/><path d="M12 18v-2h-.5"/></symbol>
+    <symbol id="i-premio" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-copiar" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-esq" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-dir" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-equipe" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></symbol>
+    <symbol id="i-chave" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-lampada" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="i-formatura" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-calendario" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-foguete" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+  </svg>
+
+  <!-- ======================================================
+       MENU DE NAVEGAÇÃO
+       ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="recipiente navbar-conteudo">
+      <a href="#inicio" class="logo">
+        <img src="assets/kaua.jpg" alt="Foto de Kauã Batista Barbosa" class="logo-foto">
+        <span>Kauã<span class="texto-verde">.dev</span></span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#certificados">Certificados</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false">
+        <svg class="icone" id="iconeMenu"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================
+         HERO (início)
+         ====================================================== -->
+    <section class="hero" id="inicio">
+      <div class="hero-fundo" aria-hidden="true"></div>
+      <div class="hero-brilho" aria-hidden="true"></div>
+
+      <div class="recipiente hero-conteudo">
+        <div class="hero-texto">
+          <span class="badge-disponivel">
+            <span class="ponto-pulsante" aria-hidden="true"></span>
+            Aprendendo e construindo todos os dias
+          </span>
+
+          <h1>Olá, eu sou o <span class="texto-gradiente">Kauã</span><span class="texto-verde">.</span></h1>
+          <p class="hero-papel">Desenvolvedor em Evolução</p>
+          <p class="hero-descricao">
+            Estudante de Desenvolvimento de Sistemas no SENAI construindo projetos reais
+            enquanto aprendo — um dia de cada vez, sem pressa de parecer pronto.
+          </p>
+
+          <div class="hero-botoes">
+            <a href="#projetos" class="botao botao-destaque">Ver meus projetos</a>
+            <a href="#contato" class="botao botao-contorno">Falar comigo</a>
+          </div>
+
+          <p class="hero-local">
+            <svg class="icone texto-verde"><use href="#i-pin"/></svg>
+            São Paulo, SP
+          </p>
+        </div>
+
+        <!-- Terminal animado (as linhas são digitadas pelo script.js) -->
+        <div class="terminal sombra-brilho">
+          <div class="terminal-barra">
+            <span class="bolinhas" aria-hidden="true"><i class="b vermelha"></i><i class="b amarela"></i><i class="b verde"></i></span>
+            <span class="terminal-titulo">
+              <img src="assets/kaua.jpg" alt="" class="terminal-foto">
+              kaua.dev.js
+            </span>
+            <span class="terminal-espaco" aria-hidden="true"></span>
+          </div>
+          <div class="terminal-corpo" id="terminal" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="hero-seta" aria-label="Rolar para a seção Sobre">
+        <svg class="icone"><use href="#i-baixo"/></svg>
+      </a>
+    </section>
+
+    <!-- ======================================================
+         SOBRE
+         ====================================================== -->
+    <section class="secao" id="sobre">
+      <div class="recipiente">
+        <div class="cabecalho-secao revelar">
+          <span class="tag-mono">// sobre mim</span>
+          <h2>Quem está construindo tudo isso</h2>
+          <p class="desc-secao">Uma apresentação honesta: onde eu estou, o que estou aprendendo e para onde estou indo.</p>
+        </div>
+
+        <div class="sobre-grid">
+          <div class="sobre-bio revelar">
+            <p>Sou o Kauã, estudante de ensino médio integrado ao técnico em Desenvolvimento de Sistemas no SENAI. Passo metade da semana na escola e metade no SENAI aprendendo a transformar ideias em sites e apps — e é exatamente isso que eu gosto de fazer.</p>
+            <p>Este portfólio é meu registro de evolução: cada projeto aqui foi construído enquanto aprendia, do protótipo em papel até o JavaScript que deixa tudo interativo. Não tenho pressa de parecer pronto — tenho pressa de aprender de verdade.</p>
+            <p>Meu plano é simples: evoluir um dia de cada vez, absorvendo tudo o que o curso e a prática me ensinam, para estar preparado para qualquer caminho dentro da tecnologia — front-end, back-end ou o que ainda estiver por vir.</p>
+          </div>
+
+          <aside class="cartao-perfil revelar">
+            <div class="perfil-foto-moldura">
+              <img src="assets/kaua.jpg" alt="Foto de Kauã Batista Barbosa" class="perfil-foto">
+            </div>
+            <h3>Kauã Batista Barbosa</h3>
+            <p class="perfil-papel">Desenvolvedor em Evolução</p>
+            <p class="perfil-local">
+              <svg class="icone"><use href="#i-pin"/></svg>
+              São Paulo, SP
+            </p>
+
+            <dl class="fatos">
+              <div class="fato">
+                <svg class="icone texto-verde"><use href="#i-formatura"/></svg>
+                <div>
+                  <dt>Formação</dt>
+                  <dd>Técnico em Desenvolvimento de Sistemas — SENAI (início fev/2026)</dd>
+                </div>
+              </div>
+              <div class="fato">
+                <svg class="icone texto-verde"><use href="#i-calendario"/></svg>
+                <div>
+                  <dt>Ritmo</dt>
+                  <dd>3 dias de escola + 2 dias de SENAI, todos os dias aprendendo</dd>
+                </div>
+              </div>
+              <div class="fato">
+                <svg class="icone texto-verde"><use href="#i-foguete"/></svg>
+                <div>
+                  <dt>Foco</dt>
+                  <dd>Criar sites e apps — da ideia ao código</dd>
+                </div>
+              </div>
+              <div class="fato">
+                <svg class="icone texto-verde"><use href="#i-pin"/></svg>
+                <div>
+                  <dt>Objetivo</dt>
+                  <dd>Evoluir constantemente para qualquer área de TI</dd>
+                </div>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PROJETOS — cada cartão tem data-projeto, que liga o
+         botão "Ver imagens" à galeria do script.js
+         ====================================================== -->
+    <section class="secao" id="projetos">
+      <div class="recipiente">
+        <div class="cabecalho-secao revelar">
+          <span class="tag-mono">// projetos</span>
+          <h2>O que eu já construí</h2>
+          <p class="desc-secao">Projetos que venho construindo no SENAI e por conta própria — de sites e protótipos a experimentos com código. Clique em um projeto para folhear todas as imagens dele, uma a uma e em tela cheia.</p>
+        </div>
+
+        <div class="grade-projetos">
+
+          <!-- 1 · Manual Interativo (tem versão interativa de verdade) -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="manual" aria-label="Ver imagens do projeto Manual Interativo de Postura Profissional">
+              <img src="assets/projects/manual-postura-01-hero.jpg" alt="Página inicial do Manual Interativo de Postura Profissional" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> Manual Interativo de Postura Profissional</h3>
+              <p class="projeto-desc">Site educacional completo que desenvolvi com HTML, CSS e JavaScript puro: guia de postura profissional com filtro de ambientes, accordion expansível, quiz com pontuação e certificado personalizado que preenche nome e data em tempo real — tudo manipulando o DOM, sem frameworks.</p>
+              <ul class="destaques">
+                <li>Rodando de verdade aqui no portfólio — clique em Abrir e interagir</li>
+                <li>Quiz interativo com pontuação e perfil final</li>
+                <li>Filtro de ambientes e accordion via DOM</li>
+                <li>Certificado personalizado com data automática</li>
+              </ul>
+              <div class="techs"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>DOM</span><span>Interatividade</span></div>
+              <div class="projeto-botoes">
+                <a class="botao botao-destaque" href="manuals/postura-profissional/index.html" target="_blank" rel="noopener">
+                  <svg class="icone"><use href="#i-clique"/></svg> Abrir e interagir
+                </a>
+                <button class="botao botao-contorno" data-abre-galeria="manual">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 · TechStore -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="techstore" aria-label="Ver imagens do projeto TechStore — Loja Virtual">
+              <img src="assets/projects/techstore.jpg" alt="Página completa da loja TechStore" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+              <span class="etiqueta-equipe"><svg class="icone"><use href="#i-equipe"/></svg> Em dupla com Larissa Brito</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> TechStore — Loja Virtual</h3>
+              <p class="projeto-desc">Loja virtual de eletrônicos construída com HTML, CSS e Bootstrap: vitrine de produtos em destaque, cards com preços e descrições, faixa de frete grátis e layout responsivo. Um dos meus primeiros sites completos, do planejamento ao rodapé.</p>
+              <ul class="destaques">
+                <li>Vitrine de produtos em destaque</li>
+                <li>Layout responsivo com Bootstrap</li>
+                <li>Faixa de frete grátis e cards de preço</li>
+              </ul>
+              <div class="techs"><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Responsividade</span></div>
+              <div class="projeto-botoes">
+                <button class="botao botao-contorno" data-abre-galeria="techstore">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 · Sabor Caseiro -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="sabor" aria-label="Ver imagens do projeto Sabor Caseiro — App de Delivery">
+              <img src="assets/projects/sabor-caseiro-01.jpg" alt="Capa do projeto Sabor Caseiro" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+              <span class="etiqueta-equipe"><svg class="icone"><use href="#i-equipe"/></svg> Em equipe com Cauffer Luthiay e Larissa Brito</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> Sabor Caseiro — App de Delivery</h3>
+              <p class="projeto-desc">Projeto de UX com simulação de cliente real: levantamento de requisitos, entrevistas e protótipo em papel de um app de delivery de comida caseira. Aprendi na prática que entender o problema vem antes de escrever qualquer linha de código.</p>
+              <ul class="destaques">
+                <li>Levantamento de requisitos com cliente simulado</li>
+                <li>Protótipo em papel de todas as telas do app</li>
+                <li>Identidade visual e reflexão sobre o processo</li>
+              </ul>
+              <div class="techs"><span>UX</span><span>Prototipagem</span><span>Requisitos</span><span>Trabalho em equipe</span></div>
+              <div class="projeto-botoes">
+                <button class="botao botao-contorno" data-abre-galeria="sabor">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 · FutureTech -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="futuretech" aria-label="Ver imagens do projeto FutureTech — Pitch de Ideia com IA">
+              <img src="assets/projects/futuretech-01.jpg" alt="Capa do pitch FutureTech" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> FutureTech — Pitch de Ideia com IA</h3>
+              <p class="projeto-desc">Pitch de uma startup fictícia de análise de dados com inteligência artificial: público-alvo, problemas que o produto resolve e um caso de uso com resultado concreto. Meu primeiro contato com IA aplicada a negócios e comunicação de ideias.</p>
+              <ul class="destaques">
+                <li>Conceito de produto com IA explicado de forma simples</li>
+                <li>Caso de uso com resultado mensurável (+20% vendas)</li>
+                <li>Estrutura de pitch: problema, solução e público</li>
+              </ul>
+              <div class="techs"><span>IA</span><span>Pitch</span><span>Modelo de negócio</span><span>Apresentação</span></div>
+              <div class="projeto-botoes">
+                <button class="botao botao-contorno" data-abre-galeria="futuretech">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 · Mercado Livre com JavaScript -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="mercadolivre" aria-label="Ver imagens do projeto Mercado Livre — Página Transformada com JavaScript">
+              <img src="assets/projects/mercado-livre-antes.jpg" alt="Página do Mercado Livre antes da transformação" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> Mercado Livre — Página Transformada com JavaScript</h3>
+              <p class="projeto-desc">Atividade prática de manipulação do DOM: peguei o Mercado Livre de verdade e transformei a página com JavaScript puro — cores do header, texto da busca e estilo dos produtos, tudo via querySelector e propriedades CSS.</p>
+              <ul class="destaques">
+                <li>querySelector e manipulação de estilos em tempo real</li>
+                <li>Comparativo antes/depois da página real</li>
+                <li>Documento com os códigos comentados</li>
+              </ul>
+              <div class="techs"><span>JavaScript</span><span>DOM</span><span>CSS</span><span>DevTools</span></div>
+              <div class="projeto-botoes">
+                <button class="botao botao-contorno" data-abre-galeria="mercadolivre">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 · Scrum e Metodologias Ágeis -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="scrum" aria-label="Ver imagens do projeto Scrum e Metodologias Ágeis">
+              <img src="assets/projects/scrum-01.jpg" alt="Capa da apresentação sobre Scrum" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+              <span class="etiqueta-equipe"><svg class="icone"><use href="#i-equipe"/></svg> Em trio com Junifher Lohayne e Larissa Brito</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> Scrum e Metodologias Ágeis</h3>
+              <p class="projeto-desc">Apresentação completa sobre Scrum feita em trio: desde o modelo cascata até eventos, papéis e artefatos — com um exemplo de como aplicamos o framework no nosso próprio grupo, organizando tarefas no Trello. Eu fiquei com o papel de Product Owner.</p>
+              <ul class="destaques">
+                <li>24 slides cobrindo papéis, eventos e artefatos</li>
+                <li>Aplicação real no nosso grupo com Trello</li>
+                <li>Comparação com XP, Lean e modelo cascata</li>
+              </ul>
+              <div class="techs"><span>Scrum</span><span>Metodologias ágeis</span><span>Trello</span><span>Apresentação</span></div>
+              <div class="projeto-botoes">
+                <button class="botao botao-contorno" data-abre-galeria="scrum">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 · The Umbrella Academy -->
+          <article class="cartao-projeto revelar">
+            <button class="capa" data-abre-galeria="umbrella" aria-label="Ver imagens do projeto The Umbrella Academy — Referência Visual">
+              <img src="assets/projects/umbrella-01.jpg" alt="Capa do trabalho de referência visual de The Umbrella Academy" loading="lazy">
+              <span class="capa-veja"><svg class="icone"><use href="#i-imagens"/></svg> Ver imagens</span>
+            </button>
+            <div class="projeto-corpo">
+              <h3><svg class="icone texto-verde"><use href="#i-codigo"/></svg> The Umbrella Academy — Referência Visual</h3>
+              <p class="projeto-desc">Trabalho de referência visual estudando a identidade de The Umbrella Academy: paleta de cores sombrias com dourado, tipografia e o porquê de cada escolha estética. O mesmo exercício de olhar que uso para criar interfaces.</p>
+              <ul class="destaques">
+                <li>Paleta de cores extraída da identidade da série</li>
+                <li>Análise de tipografia e clima visual</li>
+                <li>Base para escolhas de design em interfaces</li>
+              </ul>
+              <div class="techs"><span>Design</span><span>Paleta de cores</span><span>Tipografia</span><span>Referência visual</span></div>
+              <div class="projeto-botoes">
+                <button class="botao botao-contorno" data-abre-galeria="umbrella">Ver imagens</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         HABILIDADES
+         ====================================================== -->
+    <section class="secao" id="habilidades">
+      <div class="recipiente">
+        <div class="cabecalho-secao revelar">
+          <span class="tag-mono">// habilidades</span>
+          <h2>O que estou aprendendo</h2>
+          <p class="desc-secao">Tudo isso vem das aulas do SENAI e do estudo em casa — e cresce a cada módulo do curso. Sem inflar o que ainda não sei.</p>
+        </div>
+
+        <div class="grade-habilidades">
+          <div class="cartao-hab revelar">
+            <div class="cartao-hab-topo">
+              <span class="icone-caixa"><svg class="icone texto-verde"><use href="#i-cpu"/></svg></span>
+              <h3>Front-end</h3>
+            </div>
+            <ul class="pills-mono">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Next.js</li><li>Tailwind CSS</li><li>Responsividade</li>
+            </ul>
+          </div>
+
+          <div class="cartao-hab revelar">
+            <div class="cartao-hab-topo">
+              <span class="icone-caixa"><svg class="icone texto-verde"><use href="#i-chave"/></svg></span>
+              <h3>Back-end</h3>
+            </div>
+            <ul class="pills-mono">
+              <li>Node.js</li>
+            </ul>
+            <p class="nota-hab">Em construção — a cada módulo do curso, uma tecnologia nova</p>
+          </div>
+
+          <div class="cartao-hab revelar">
+            <div class="cartao-hab-topo">
+              <span class="icone-caixa"><svg class="icone texto-verde"><use href="#i-lampada"/></svg></span>
+              <h3>Ferramentas &amp; Práticas</h3>
+            </div>
+            <ul class="pills-mono">
+              <li>GitHub</li><li>VS Code</li><li>Figma</li><li>Linux</li><li>Vercel</li><li>Metodologias ágeis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao-soft revelar">
+          <h3>Além do código</h3>
+          <p class="cartao-soft-desc">Habilidades que os projetos em grupo já me deram de brinde.</p>
+          <ul class="pills-verdes">
+            <li>Trabalho em equipe</li><li>Comunicação</li><li>Vontade de aprender</li>
+            <li>Organização (5S)</li><li>Proatividade</li><li>Apresentação e pitch</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CERTIFICADOS — clique abre o visualizador em tela cheia
+         ====================================================== -->
+    <section class="secao secao-certificados" id="certificados">
+      <div class="recipiente">
+        <div class="cabecalho-secao revelar">
+          <span class="tag-mono">// certificados</span>
+          <h2>Conquistas no papel</h2>
+          <p class="desc-secao">Cursos e avaliações que marquei no caminho — clique em qualquer um para ver o certificado em tela cheia, nítido e completo.</p>
+        </div>
+
+        <!-- Destaque: Medalha de Ouro da Prova Paulista -->
+        <button class="medalha-card revelar" data-cert
+          data-titulo="Medalha de Ouro — Prova Paulista 2026"
+          data-emissor="SEDUC-SP · Escola Estadual Oswaldo Cruz"
+          data-data="13–17/04/2026">
+          <span class="medalha-foto">
+            <img src="assets/certificates/prova-paulista-ouro.jpg" alt="Medalha de ouro da Prova Paulista 2026" loading="lazy">
+          </span>
+          <span class="medalha-info">
+            <span class="badge-medalha"><svg class="icone"><use href="#i-medalha"/></svg> Medalha de Ouro</span>
+            <h3>Medalha de Ouro — Prova Paulista 2026</h3>
+            <span class="medalha-meta">SEDUC-SP · Escola Estadual Oswaldo Cruz · 13–17/04/2026</span>
+            <span class="medalha-desc">Medalha de ouro na Prova Paulista, avaliação estadual aplicada aos estudantes da rede pública de São Paulo. Resultado de constância nos estudos — e um lembrete de que eu vou longe.</span>
+          </span>
+        </button>
+
+        <!-- Grade com os outros 8 certificados -->
+        <div class="grade-certificados">
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="AWS Cloud Practitioner Essentials (Português)"
+            data-emissor="Amazon Web Services" data-data="abr/2026">
+            <span class="cert-foto">
+              <img src="assets/certificates/aws-cloud-practitioner.jpg" alt="Certificado AWS Cloud Practitioner Essentials" loading="lazy">
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>AWS Cloud Practitioner Essentials (Português)</h3>
+              <p>Amazon Web Services · abr/2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="Introduction to Generative AI — Art of the Possible"
+            data-emissor="Amazon Web Services" data-data="abr/2026">
+            <span class="cert-foto">
+              <img src="assets/certificates/aws-generative-ai.jpg" alt="Certificado Introduction to Generative AI" loading="lazy">
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>Introduction to Generative AI — Art of the Possible</h3>
+              <p>Amazon Web Services · abr/2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="Fluência — Fundamentos da Inteligência Artificial"
+            data-emissor='SENAI "Morvan Figueiredo"' data-data="2026" data-horas="8h">
+            <span class="cert-foto">
+              <img src="assets/certificates/fluencia-ia.jpg" alt="Certificado Fluência — Fundamentos da IA" loading="lazy">
+              <span class="carga"><svg class="icone"><use href="#i-relogio"/></svg> 8h</span>
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>Fluência — Fundamentos da Inteligência Artificial</h3>
+              <p>SENAI "Morvan Figueiredo" · 2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="Ética na Inteligência Artificial"
+            data-emissor='SENAI "Morvan Figueiredo"' data-data="mai/2026" data-horas="4h">
+            <span class="cert-foto">
+              <img src="assets/certificates/etica-ia.jpg" alt="Certificado Ética na Inteligência Artificial" loading="lazy">
+              <span class="carga"><svg class="icone"><use href="#i-relogio"/></svg> 4h</span>
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>Ética na Inteligência Artificial</h3>
+              <p>SENAI "Morvan Figueiredo" · mai/2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="HTML Essentials"
+            data-emissor="Cisco Networking Academy" data-data="07/05/2026">
+            <span class="cert-foto">
+              <img src="assets/certificates/html-essentials.jpg" alt="Certificado HTML Essentials da Cisco" loading="lazy">
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>HTML Essentials</h3>
+              <p>Cisco Networking Academy · 07/05/2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="Competência Transversal — Tecnologia da Informação e Comunicação"
+            data-emissor="SENAI Educação Online" data-data="2026" data-horas="14h">
+            <span class="cert-foto">
+              <img src="assets/certificates/tic-transversal.jpg" alt="Certificado de Tecnologia da Informação e Comunicação" loading="lazy">
+              <span class="carga"><svg class="icone"><use href="#i-relogio"/></svg> 14h</span>
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>Competência Transversal — Tecnologia da Informação e Comunicação</h3>
+              <p>SENAI Educação Online · 2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="Excel Básico"
+            data-emissor='SENAI "Morvan Figueiredo"' data-data="abr/2026" data-horas="20h">
+            <span class="cert-foto">
+              <img src="assets/certificates/excel-basico.jpg" alt="Certificado Excel Básico do SENAI" loading="lazy">
+              <span class="carga"><svg class="icone"><use href="#i-relogio"/></svg> 20h</span>
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>Excel Básico</h3>
+              <p>SENAI "Morvan Figueiredo" · abr/2026</p>
+            </span>
+          </button>
+
+          <button class="cartao-certificado revelar" data-cert
+            data-titulo="Curso de Informática"
+            data-emissor="Inova Cursos Brasil" data-data="2025" data-horas="140h">
+            <span class="cert-foto">
+              <img src="assets/certificates/informatica.jpg" alt="Certificado de Curso de Informática" loading="lazy">
+              <span class="carga"><svg class="icone"><use href="#i-relogio"/></svg> 140h</span>
+              <span class="cert-hover"><svg class="icone texto-verde"><use href="#i-premio"/></svg> Ver certificado</span>
+            </span>
+            <span class="cert-info">
+              <h3>Curso de Informática</h3>
+              <p>Inova Cursos Brasil · 2025</p>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CONTATO
+         ====================================================== -->
+    <section class="secao" id="contato">
+      <div class="recipiente">
+        <div class="cabecalho-secao centro revelar">
+          <span class="tag-mono">// contato</span>
+          <h2>Vamos conversar?</h2>
+          <p class="desc-secao">Quer trocar uma ideia sobre tecnologia, projetos ou estudos? Me chama por e-mail — respondo rapidinho.</p>
+        </div>
+
+        <div class="canais revelar">
+          <a class="canal" href="mailto:kaua.b.barbosa@edu.senai.br">
+            <span class="icone-caixa"><svg class="icone texto-verde"><use href="#i-mail"/></svg></span>
+            <span>
+              <span class="canal-rotulo">E-mail</span>
+              <span class="canal-valor">kauabatistabarbosa80@gmail.com</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="contato-copiar revelar">
+          <button class="botao botao-contorno" id="botaoCopiar">
+            <svg class="icone" id="iconeCopiar"><use href="#i-copiar"/></svg>
+            <span id="textoCopiar">Copiar e-mail</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================
+       RODAPÉ
+       ====================================================== -->
+  <footer class="rodape">
+    <div class="recipiente rodape-conteudo">
+      <p class="rodape-logo"><span class="texto-forte">Kauã</span><span class="texto-verde">.dev</span></p>
+      <p class="rodape-info">Kauã Batista Barbosa · Desenvolvedor em Evolução · São Paulo, SP</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================
+       MODAL 1 — Galeria de imagens dos projetos
+       ====================================================== -->
+  <div class="modal" id="modalGaleria" role="dialog" aria-modal="true" aria-label="Visualizador de imagens do projeto" hidden>
+    <button class="modal-fechar" id="fecharGaleria" aria-label="Fechar visualizador"><svg class="icone"><use href="#i-x"/></svg></button>
+    <button class="modal-seta esquerda" id="anteriorImagem" aria-label="Imagem anterior"><svg class="icone"><use href="#i-esq"/></svg></button>
+    <button class="modal-seta direita" id="proximaImagem" aria-label="Próxima imagem"><svg class="icone"><use href="#i-dir"/></svg></button>
+    <figure class="modal-figura" id="figuraGaleria">
+      <img id="imagemGaleria" src="" alt="">
+      <figcaption class="modal-legenda">
+        <span class="legenda-texto" id="legendaGaleria"></span>
+        <span class="legenda-contador" id="contadorGaleria"></span>
+        <a class="legenda-site" id="siteGaleria" href="#" target="_blank" rel="noopener" hidden>
+          <svg class="icone"><use href="#i-clique"/></svg> Não é só imagem — abrir o site ao vivo
+        </a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- ======================================================
+       MODAL 2 — Certificado em tela cheia
+       ====================================================== -->
+  <div class="modal" id="modalCertificado" role="dialog" aria-modal="true" aria-label="Certificado em tela cheia" hidden>
+    <button class="modal-fechar" id="fecharCertificado" aria-label="Fechar certificado"><svg class="icone"><use href="#i-x"/></svg></button>
+    <button class="modal-seta esquerda" id="anteriorCertificado" aria-label="Certificado anterior"><svg class="icone"><use href="#i-esq"/></svg></button>
+    <button class="modal-seta direita" id="proximaCertificado" aria-label="Próximo certificado"><svg class="icone"><use href="#i-dir"/></svg></button>
+    <figure class="modal-figura">
+      <img id="imagemCertificado" src="" alt="">
+      <figcaption class="modal-legenda">
+        <span class="legenda-texto" id="tituloCertificado"></span>
+        <span class="legenda-meta" id="metaCertificado"></span>
+        <span class="legenda-contador" id="contadorCertificado"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- Aviso rápido (toast) usado ao copiar o e-mail -->
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

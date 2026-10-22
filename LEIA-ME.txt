@@ -1,0 +1,72 @@
+====================================================================
+ PORTFÓLIO DO KAUÃ — VERSÃO EM HTML + CSS + JAVASCRIPT PUROS
+ (a mesma aparência e conteúdo do portfólio, do jeito da aula)
+====================================================================
+
+COMO USAR (LEIA COM ATENÇÃO — EVITA 99% DOS PROBLEMAS)
+-------------------------------------------------------
+1. EXTRAIA O ZIP INTEIRO antes de abrir (botão direito → Extrair
+   tudo). NÃO abra o index.html de dentro do zip.
+2. Guarde ESTA pasta inteira sempre JUNTA: index.html, style.css,
+   script.js, assets/ e manuals/ são um time — se separar algum,
+   o site abre sem foto ou sem estilo.
+3. Dê dois cliques no index.html (abra de preferência no Chrome,
+   Edge ou Firefox) — funciona tudo offline, sem servidor,
+   sem instalação e sem terminal.
+4. Se as letras parecerem pequenas, aperte Ctrl + 0 (volta o
+   zoom padrão) e Ctrl + + (aumenta). No celular, use o site
+   pelo link de preview — a versão local é melhor no computador.
+
+PROBLEMAS COMUNS
+----------------
+• Apareceu um texto "Foto de Kauã..." no lugar da foto?
+  → Os arquivos se separaram: extraia o zip NOVAMENTE, inteiro,
+    e abra o index.html que fica DENTRO da pasta extraída
+    (junto com a style.css e a pasta assets/).
+• A página abrou toda branca / sem cor?
+  → O style.css não está ao lado do index.html. Mantenha a
+    estrutura da pasta exatamente como veio no zip.
+• Clicou num projeto e a galeria não abriu?
+  → O script.js precisa estar junto também. Mesma solução:
+    extraia tudo e não mexa na estrutura.
+
+O QUE É CADA ARQUIVO
+--------------------
+  index.html   → a ESTRUTURA: todo o conteúdo visível do site
+                 (seções, textos, projetos, certificados). Está
+                 todo comentado em português, por ordem de seção.
+  style.css    → o ESTILO: cores do tema dark premium (#0A0A0A +
+                 verde neon), cartões, grade responsiva, modais,
+                 animações. Organizado em 15 blocos numerados.
+  script.js    → a LÓGICA: menu do celular, efeito de digitação
+                 do terminal, animações ao rolar, visualizador de
+                 imagens dos projetos (com legendas), visualizador
+                 de certificados (setas ← → e ESC), botão copiar
+                 e-mail. Organizado em 7 blocos numerados.
+  assets/      → as imagens (sua foto, projetos e certificados).
+  manuals/     → o seu Manual de Postura Profissional (site que
+                 você já tinha feito em HTML/CSS/JS). O botão
+                 "Abrir e interagir" abre ele em nova aba.
+
+ONDE EDITAR O QUÊ
+-----------------
+  • Trocar um texto ou projeto      → index.html (seção comentada)
+  • Mudar cores ou espaçamentos     → style.css (variáveis no topo,
+    em :root — troque --verde, --fundo etc. e o site todo muda)
+  • Mudar legendas das imagens      → script.js (objeto GALERIAS)
+  • Trocar o e-mail                 → index.html (seção Contato) e
+    script.js (constante EMAIL)
+
+O QUE CADA LINGUAGEM FAZ AQUI
+-----------------------------
+  HTML      → o esqueleto: O QUE aparece na página
+  CSS       → a aparência: COMO aparece (cores, tamanhos, posições)
+  JavaScript→ o comportamento: O QUE REAGE quando a pessoa clica,
+              rola a página ou aperta teclas
+
+Diferenças em relação à versão Next.js (a que roda no ar):
+  • Mesmo conteúdo, mesmas seções, mesmo visual e mesmas funções.
+  • "Abrir e interagir" abre o manual em NOVA ABA (em vez do modal
+    com iframe) — mais simples e funciona até por arquivo local.
+  • O visualizador do certificado usa a mesma lógica, mas escrita
+    de forma mais simples para estudo.
